@@ -33,19 +33,20 @@ import androidx.compose.ui.unit.sp
 fun FormDataDiri(modifier: Modifier = Modifier) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
-    var textNomorTelepon by remember { mutableStateOf("") }
-    var textJenisKelamin by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
 
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
     val gender:List<String> = listOf("Laki-laki","Perempuan")
+
     Column(modifier = modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally) {
+
         OutlinedTextField(
             value = textNama,
-            SingleLine = true,
+            singleLine = true,
             shape = MaterialTheme.shapes.large,
             modifier = Modifier.width(250.dp),
             label = { Text(text = "Nama Lengkap") },
@@ -58,9 +59,9 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             gender.forEach { item ->
                 Row(
                     modifier = Modifier.selectable(
-                    selected = textJK == item,
-                    onClick = { textJK == item }
-                ), verticalAlignment = Alignment.CenterVertically) {
+                        selected = textJK == item,
+                        onClick = { textJK = item }
+                    ), verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(
                         selected = textJK == item,
                         onClick = { textJK = item }
@@ -70,3 +71,4 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         }
     }
+}
