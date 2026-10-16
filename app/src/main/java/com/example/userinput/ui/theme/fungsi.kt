@@ -59,7 +59,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 Row(modifier = Modifier.selectable(
                     selected = textJK == item,
                     onClick = { textJK == item }
-                ),
+                ), verticalAlignment = Alignment.CenterVertically) 
             }
         }
     }
