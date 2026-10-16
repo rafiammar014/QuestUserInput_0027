@@ -2,6 +2,7 @@ package com.example.userinput.ui.theme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -82,8 +84,15 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         )
         HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom =
+                    dimensionResource(R.dimen.padding_medium), top = dimensionResource(
+                    id = R.dimen.padding_medium
+            )
+        ),
+        thickness = dimensionResource(R.dimen.drivider_tipis),
+        color = color,DankGray
         )
-
 
     }
 }
