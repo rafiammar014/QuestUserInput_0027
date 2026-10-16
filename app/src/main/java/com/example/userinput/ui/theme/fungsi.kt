@@ -26,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -85,14 +86,22 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         )
         HorizontalDivider(
             modifier = Modifier.padding(
-                bottom =
-                    dimensionResource(R.dimen.padding_medium), top = dimensionResource(
-                    id = R.dimen.padding_medium
-            )
-        ),
-        thickness = dimensionResource(R.dimen.drivider_tipis),
-        color = color,DankGray
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource(R.dimen.padding_medium)
+            ),
+            thickness = dimensionResource(R.dimen.divider_tipis),
+            color = Color.DarkGray
         )
+    Button(
+        modifier = Modifier.fillMaxWidth(1f),
+        enabled = textNama.isNotEmpty(),
+        onClick = {
+            nama = textNama
+            alamat = textAlamat
+            jenis = textJK
+        }
+    )
+
 
     }
 }
