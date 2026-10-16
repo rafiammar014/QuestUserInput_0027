@@ -13,6 +13,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -80,7 +81,9 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 textAlamat = it
             }
         )
+        HorizontalDivider(
+        )
 
-        
+
     }
 }
